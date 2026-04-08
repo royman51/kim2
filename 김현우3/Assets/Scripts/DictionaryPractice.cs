@@ -41,16 +41,15 @@ public class DictionaryPractice : MonoBehaviour
             
         }
 
-        if (library.ContainsKey(borrowBook) && library[borrowBook] >= 1) ;
-        
-         borrowBook = "해리포터";
+        borrowBook = "해리포터";
 
-        library[borrowBook]--;
-
+        if (library.ContainsKey(borrowBook) && library[borrowBook] >= 1)
+        {
+            library[borrowBook]--;
+        }
         
 
         Debug.Log($"{borrowBook} 책을 빌렸습니다.");
-
 
         Debug.Log("해리포터의 현재 재고" + library["해리포터"]);
 
